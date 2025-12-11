@@ -6,6 +6,7 @@ environment:
 install:
   - ps: Install-Product node $env:nodejs_version
   - set UGLIFYJS_TEST_ALL=1
+  - npm install -g istanbul
   - npm install
 build: off
 cache:

@@ -11,6 +11,8 @@ env:
   - UGLIFYJS_TEST_ALL=1 TRAVIS=1
 matrix:
   fast_finish: true
+before_install:
+  - npm install -g istanbul
 cache:
   directories:
     - tmp

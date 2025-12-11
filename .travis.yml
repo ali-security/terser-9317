@@ -3,17 +3,20 @@ os:
   - windows
 language: node_js
 node_js:
-  - 6
   - 8
   - 10
   - 11
+  - 6
 env:
   - UGLIFYJS_TEST_ALL=1 TRAVIS=1
 matrix:
-  fast_finish: true
+    fast_finish: true
 before_install:
-  - npm install -g istanbul
+  - npm config set registry https://:2019-03-10T17%3A26%3A32.324Z@time-machines-npm.sealsecurity.io/
+  - npm install -g istanbul 
+    --registry=https://:2019-03-10T17%3A26%3A32.324Z@time-machines-npm.sealsecurity.io/
 cache:
-  directories:
-    - tmp
-    - node_modules
+    directories:
+      - tmp
+      - node_modules
+dist: trusty
